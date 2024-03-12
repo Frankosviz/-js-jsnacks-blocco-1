@@ -1,33 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+// 1. TuttiFrutti
+// Cartella array-lista
+// Descrizione:
+// Abbiamo un frigorifero pieno di frutta:
+// 'banana', 'mela', 'pera', 'ciliegia', 'arancia', 'mandarino', 'cocomero', 'limone', 'fragola'  
+// C'è anche una pesca sul tavolo, la mettiamo nel frigo.
+// Stasera dobbiamo fare un cocktail a base di cocomero: ce l'abbiamo o no in frigo?
+// Fasi
+// 1. creare l'array con la frutta del frigorifero
+// 2. aggiungere la pesca all'array della frutta
+// 3. verificare se nell'array di frutta c'è il cocomero:
+//    - se c'è stampiamo: "Trovato! Devo solo preparare il cocktail."
+//    - se non lo trovo: "Oh no, devo uscire a comprare il cocomero!"
+// Suggerimenti/Indicazioni:
+// Sì, lo sappiamo che esiste la funzione includes() ma noi non la vogliamo utilizzare per cercare nel frigorifero.
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/14dd55bd5d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <title>js-mail-dadi</title>
-</head>
+// Svolgimento..
 
-<!-- Array -->
+let list = ['banana', 'mela', 'pera', 'ciliegia', 'arancia', 'mandarino', 'cocomero', 'limone', 'fragola'];
 
-<body>
-    <div class="container my-4">
+let specialItem = 'pesca';
+console.log('pesca');
 
-        <form class=" ">
-            <div class="">
-                <input type="email" class="form-control" id="userValue">
-            </div>
-            <button class="btn btn-success email">Iscriviti</button>
-        </form>
+list.push(specialItem);
+console.log(list);
 
-        <div id="result" class="">
+let finded = false;
 
-        </div>
-    </div>
+for(let i = 0; i < list.length; i++){
+    if (list[i] === 'cocomero'){
+        finded = true;      
+    } 
+}
+
+if (finded) {
+    console.log('Trovato, devo solo preparare il cocktail!');
+} else {
+    console.log('Dobbiamo andare a fare la spesa');
+}
 
 
-    <script src="js/script.js" type="text/javascript"></script>
-    <script src="js/utility.js" type="text/javascript"></script>
+
