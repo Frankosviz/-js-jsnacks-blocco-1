@@ -9,6 +9,12 @@
 
 // Svolgimento..
 
+// Funzione per trovare i numeri random
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
 // Associamo tutto ad un bottone
 
 const button = document.querySelector('.btn');
@@ -17,14 +23,27 @@ const button = document.querySelector('.btn');
 
 button.addEventListener('click', function(){
     const nElement = parseInt(document.getElementById('userValue').value);
+    console.log(nElement);
     
     // Otteniamo il valore numerico che l'utente ha scelto
     console.log(nElement); 
 
-    // Controlliamo se i numeri sono minori o uguali a 0
-    
-    if (isNaN(nElement) || nElementi <= 0) {
+    // Controlliamo se i numeri sono minori o uguali a 0 altrimenti prendiamo il numero casuale
+
+    if (isNaN(nElement) || nElement <= 0) {
         alert("Numero rifiutato. Inserisci un numero valido");
+        console.log(alert);
+    
+    } else { 
+
+    // creo la variabile vuota per i numeri random
+       
+    const nRandom = [];
+    for (let i = 0; i <=100; i++){
+        console.log()
+    } 
+
+     }
 
         
 })
