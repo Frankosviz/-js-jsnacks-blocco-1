@@ -23,10 +23,9 @@ const button = document.querySelector('.btn');
 
 button.addEventListener('click', function(){
     const nElement = parseInt(document.getElementById('userValue').value);
-    console.log(nElement);
+    // console.log(nElement);
     
-    // Otteniamo il valore numerico che l'utente ha scelto
-    console.log(nElement); 
+    // Otteniamo il valore numerico che l'utente ha scelto 
 
     // Controlliamo se i numeri sono minori o uguali a 0 altrimenti prendiamo il numero casuale
 
@@ -36,15 +35,15 @@ button.addEventListener('click', function(){
     
     } else { 
 
-    // creo la variabile vuota per i numeri random
+    // creo la costante vuota per i numeri random
        
     const nRandom = [];
-    for (let i = 0; i <=100; i++){
-        console.log()
-    } 
+    for (let i = 0; i < nElement; i++){
+    nRandom.push(getRndInteger(1,100));
+    console.log(nRandom);
+    }
 
-     }
-
-        
+    console.log("Gli ultimi 5 elementi dell'array sono:\n" + nRandom.slice(-5));
+}
 })
 
